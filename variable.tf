@@ -15,7 +15,7 @@ variable "sg"  {
 }
 
 variable "api_termination" {
-  default = true
+  default = false
 } 
 
 variable "nosofinstances" {
