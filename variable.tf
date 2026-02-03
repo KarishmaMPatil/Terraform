@@ -3,7 +3,7 @@ variable "instanceami" {
 }
 
 variable "instancetype"  {
-    default = t3.micro
+    default = "t3.micro"
 }
 
 variable "keyname"  {
@@ -12,4 +12,5 @@ variable "keyname"  {
 
 variable "sg"  {
     default = "sg-07474c841ef9cd4f6"
+
 }
