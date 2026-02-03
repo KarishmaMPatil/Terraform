@@ -12,5 +12,12 @@ variable "keyname"  {
 
 variable "sg"  {
     default = "sg-07474c841ef9cd4f6"
+}
 
+variable "api_termination" {
+  default = true
+} 
+
+variable "nosofinstances" {
+  default = 2
 }
