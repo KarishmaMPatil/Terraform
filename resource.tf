@@ -54,3 +54,7 @@ data "aws_security_group" "sg_gui" {
 #2    "kari"  = string
 #3     true  = boolean
 #4     2.1 = float
+
+
+#2 instance is created
+# 3 security grp is created 1 is default 2 terraform security grp 3 is rds security
