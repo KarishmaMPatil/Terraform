@@ -4,7 +4,7 @@ resource "aws_instance" "webserver" {
   instance_type          = var.instancetype
   vpc_security_group_ids = [ var.sg , aws_security_group.webserversg.id , data.aws_security_group.sg_gui.id] #cloudprovider_tfresourcegame.uniqueblockname.attribute
   key_name               = var.keyname
-  count = var.nosofinstances       #2instance is created
+  #count = var.nosofinstances       #2instance is created
   disable_api_termination = var.api_termination  #instance is not terminated
   tags = {
     Name    = "webserver-instance"
@@ -53,7 +53,7 @@ output "webserver_public_ip" {
 }
 
 output "webserver_instance_id" {
-  value = aws_instance.webserver.webserver.instance_id
+  value = aws_instance.webserver.id
 }
 
 output "webserver_public_DNS" {
@@ -61,7 +61,15 @@ output "webserver_public_DNS" {
 }
 
 output "webserver_instance_state" {
-  value = aws_instance_webserver.instance_state
+  value = aws_instance.webserver.instance_state
+}
+
+output "webserver_sg_id" {
+  value = aws_security_group.webserversg.id
+}
+
+output "webserver_sg_arn" {
+  value = aws_security_group.webserversg.arn
 }
 #datatypes
 #1     1=  number
