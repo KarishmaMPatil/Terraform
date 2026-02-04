@@ -5,7 +5,7 @@ resource "aws_instance" "webserver" {
   vpc_security_group_ids = [ var.sg , aws_security_group.webserversg.id , data.aws_security_group.sg_gui.id] #cloudprovider_tfresourcegame.uniqueblockname.attribute
   key_name               = var.keyname
   #count = var.nosofinstances       #2instance is created
-  disable_api_termination = var.api_termination  #instance is not terminated
+  #disable_api_termination = var.api_termination  #instance is not terminated
   tags = {
     Name    = "webserver-instance"
     purpose = "learning-terraform"
