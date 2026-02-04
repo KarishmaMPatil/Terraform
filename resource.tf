@@ -48,7 +48,21 @@ data "aws_security_group" "sg_gui" {
    name = "security for rds"    #name of securitygrp you want search in aws console
 }
 
+output "webserver_public_ip" {
+  value = aws_instance.webserver.public_ip
+}
 
+output "webserver_instance_id" {
+  value = aws_instance.webserver.webserver.instance_id
+}
+
+output "webserver_public_DNS" {
+  value = aws_instance.webserver.public_dns
+}
+
+output "webserver_instance_state" {
+  value = aws_instance_webserver.instance_state
+}
 #datatypes
 #1     1=  number
 #2    "kari"  = string
